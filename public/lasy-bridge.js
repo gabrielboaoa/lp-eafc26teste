@@ -76,6 +76,48 @@
         return; // Não processar outros erros se sandbox expirou
       }
       
+      // ✅ NOVO: Detectar erro de conexão na porta 3000
+      if (document.title.includes('This site can\'t be reached') ||
+          document.body.innerHTML.includes('ERR_CONNECTION_REFUSED') ||
+          document.body.innerHTML.includes('localhost:3000') ||
+          document.body.innerHTML.includes('refused to connect') ||
+          document.body.innerHTML.includes('This page isn\'t working') ||
+          (window.location.hostname === 'localhost' && document.body.innerHTML.includes('connection'))) {
+        publish({
+          source: 'connection-error',
+          level: 'error',
+          message: 'Projeto não conectado na porta 3000',
+          args: ['Projeto não está rodando na porta 3000'],
+          type: 'port-3000-not-connected',
+          errorSource: 'localhost-connection'
+        });
+        console.warn('[Lasy Bridge] Port 3000 connection error detected');
+        return;
+      }
+      
+      // ✅ NOVO: Detectar erro de BUILD do NextJS (tela vermelha)
+      if (document.body.innerHTML.includes('Application error: a client-side exception has occurred') ||
+          document.body.innerHTML.includes('Unhandled Runtime Error') ||
+          document.body.innerHTML.includes('Error: ') ||
+          document.querySelector('[data-nextjs-toast]') ||
+          document.querySelector('#__next-build-watcher') ||
+          document.body.innerHTML.includes('ChunkLoadError') ||
+          document.body.innerHTML.includes('SyntaxError') ||
+          document.body.innerHTML.includes('Module not found') ||
+          (document.body.style.backgroundColor === 'rgb(255, 85, 85)' || 
+           document.body.style.backgroundColor === 'red' ||
+           document.documentElement.style.backgroundColor === 'rgb(255, 85, 85)')) {
+        publish({
+          source: 'nextjs-build-error',
+          level: 'error',
+          message: 'Erro de BUILD detectado no NextJS',
+          args: ['Erro na compilação/build do projeto NextJS'],
+          type: 'nextjs-build-error',
+          errorSource: 'nextjs-build'
+        });
+        console.warn('[Lasy Bridge] NextJS build error detected');
+      }
+
       // Capturar erro atual do Next.js (apenas se não for problema de sandbox)
       const nextData = window.__NEXT_DATA__;
       if (nextData?.err) {
