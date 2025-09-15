@@ -150,13 +150,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* CTA Principal com efeito neon */}
+            {/* Informação sobre contato removendo CTA */}
             <div className="space-y-6">
-              <button className="relative bg-gradient-to-r from-green-500 to-green-600 hover:from-green-400 hover:to-green-500 text-black font-black text-2xl px-16 py-6 rounded-3xl transition-all duration-300 hover:scale-110 shadow-2xl hover:shadow-green-500/50 overflow-hidden group">
-                {/* Efeito de brilho no botão */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 group-hover:animate-shimmer"></div>
-                <span className="relative z-10">🚀 GARANTIR MEU EA FC 26 AGORA</span>
-              </button>
               <p className="text-lg text-gray-300 font-semibold">
                 ⚡ Últimas unidades disponíveis • 🔒 Pagamento 100% seguro
               </p>
@@ -303,10 +298,6 @@ export default function Home() {
                   Preço na PSN: <span className="line-through">R$ 350,00</span>
                 </div>
               </div>
-
-              <button className="w-full bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-white font-bold py-4 rounded-2xl mt-6 transition-all duration-300">
-                COMPRAR STANDARD
-              </button>
             </div>
 
             {/* Versão Ultimate */}
@@ -382,10 +373,6 @@ export default function Home() {
                   Preço na PSN: <span className="line-through">R$ 500,00</span>
                 </div>
               </div>
-
-              <button className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-black font-bold py-4 rounded-2xl mt-6 transition-all duration-300 hover:scale-105">
-                COMPRAR ULTIMATE
-              </button>
             </div>
           </div>
 
@@ -820,7 +807,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* CTA especial da seção */}
+          {/* Informação sobre comunidade removendo CTA */}
           <div className="mt-16 text-center">
             <div className="bg-gradient-to-r from-green-900/30 to-blue-900/30 border-2 border-green-400/40 rounded-3xl p-8 backdrop-blur-sm">
               <h3 className="text-3xl md:text-4xl font-black mb-4 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
@@ -829,9 +816,6 @@ export default function Home() {
               <p className="text-xl text-gray-300 mb-6">
                 Faça parte da maior comunidade gamer do Brasil e tenha acesso aos melhores preços e atendimento
               </p>
-              <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold text-xl px-12 py-4 rounded-2xl transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-green-500/50">
-                🎮 QUERO FAZER PARTE AGORA
-              </button>
             </div>
           </div>
         </div>
@@ -1034,7 +1018,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* CTA especial da seção */}
+          {/* Informação sobre satisfação removendo CTA */}
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-900/30 to-green-900/30 border-2 border-purple-400/40 rounded-3xl p-8 backdrop-blur-sm">
               <h3 className="text-3xl md:text-4xl font-black mb-4 bg-gradient-to-r from-purple-400 to-green-400 bg-clip-text text-transparent">
@@ -1043,9 +1027,6 @@ export default function Home() {
               <p className="text-xl text-gray-300 mb-6">
                 Junte-se aos milhares de gamers que já confiam na Icon Games
               </p>
-              <button className="bg-gradient-to-r from-purple-500 to-green-600 hover:from-purple-400 hover:to-green-500 text-white font-bold text-xl px-12 py-4 rounded-2xl transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-purple-500/50">
-                💬 QUERO COMPRAR AGORA
-              </button>
             </div>
           </div>
         </div>
@@ -1115,10 +1096,6 @@ export default function Home() {
                       <span className="text-green-400 font-semibold">Jogue online desde o primeiro dia</span>
                     </p>
                   </div>
-
-                  <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold text-xl px-12 py-4 rounded-2xl transition-all duration-300 hover:scale-105">
-                    🎮 GARANTIR PSN PLUS AGORA
-                  </button>
                 </div>
 
                 {/* Lado Direito - Imagem do PSN Plus */}
@@ -1212,11 +1189,6 @@ export default function Home() {
             </div>
 
             <div className="space-y-4">
-              <button className="relative bg-gradient-to-r from-green-500 to-green-600 hover:from-green-400 hover:to-green-500 text-black font-bold text-2xl px-16 py-6 rounded-3xl transition-all duration-300 hover:scale-110 shadow-2xl hover:shadow-green-500/50 overflow-hidden group">
-                {/* Efeito de brilho no botão */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 group-hover:animate-shimmer"></div>
-                <span className="relative z-10">🚀 COMPRAR AGORA NO WHATSAPP</span>
-              </button>
               <p className="text-sm text-gray-300 font-semibold">
                 💬 Atendimento humanizado • ⚡ Entrega imediata • 🔒 100% seguro
               </p>
